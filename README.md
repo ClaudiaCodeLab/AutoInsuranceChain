@@ -1,21 +1,97 @@
 # AutoInsuranceChain
 
-## Summary of the AutoInsuranceChain Project
-The AutoInsuranceChain project represents a significant innovation in the automotive insurance industry by leveraging blockchain technology to create a more personalized and reliable insurance experience. The project aims to address key issues within the current insurance market, such as the lack of accurate risk assessment models and the general distrust between insured parties and insurers.
+AutoInsuranceChain is an innovative platform designed to transform the auto insurance industry by leveraging blockchain technology. It provides a "Pay As You Drive" insurance model that uses real-time driving data to personalize insurance premiums, ensuring fairness and accuracy.
 
-## Importance of the Project
-The AutoInsuranceChain platform is crucial because it introduces a blockchain-based system that ensures the integrity and immutability of data related to driving habits and vehicle maintenance. This innovation allows insurers to offer highly personalized insurance premiums based on real-time driving data, rather than relying on generalized demographic information. This approach not only enhances customer trust by providing transparency but also improves the competitiveness of insurance companies by enabling them to reduce risk more effectively.
+## Table of Contents
 
-## Technical Aspects
-The project is built on the Hyperledger Fabric framework, a permissioned blockchain platform known for its scalability, privacy, and modularity. Key components of the system include:
+- [Project Overview](#project-overview)
+- [Goals](#goals)
+- [Business Model](#business-model)
+- [Target Customers](#target-customers)
+- [Problems Addressed](#problems-addressed)
+- [Value Proposition](#value-proposition)
+- [Solution](#solution)
+- [Product Description](#product-description)
+- [System Architecture](#system-architecture)
+- [Technical Foundations](#technical-foundations)
+- [Decentralized Application (DApp)](#decentralized-application-dapp)
+- [Deployment and Use](#deployment-and-use)
+- [Technical Roadmap](#technical-roadmap)
+- [Team](#team-members)
+- [Contributing](#contributing)
+- [License](#license)
 
-- IoT Integration: The platform collects driving data through IoT devices installed in vehicles, capturing metrics such as acceleration, braking patterns, and the type of roads driven on. This data is processed and stored on the blockchain, ensuring that it is tamper-proof.
+## Project Overview
 
-- Blockchain Technology: The use of Hyperledger Fabric allows for secure and private data transactions within a closed network, where each participant is a known entity. This setup is ideal for the insurance industry, where sensitive data must be handled with care.
+AutoInsuranceChain utilizes a permissioned blockchain to securely and immutably record driving data. This approach allows for precise risk evaluations and personalized insurance premiums. The project aims to address inefficiencies in traditional insurance models that rely heavily on demographic data rather than actual driving behavior.
 
-- Machine Learning: The collected data can be analyzed using machine learning algorithms to create predictive models that further refine risk assessments. This allows insurers to continually adjust premiums based on the actual behavior of the insured, leading to more accurate and fair pricing.
+## Goals
 
-- System Architecture: The architecture involves several components, including Kafka for real-time data streaming and Apache Spark for processing large volumes of data. This ensures that the system can handle high throughput and provide insights almost instantaneously.
+- **Immutability**: Record all driving data in an immutable ledger.
+- **Simplified Verifications**: Provide a reliable database for stakeholders to perform necessary verifications.
+- **Reliable Information**: Use Big Data techniques to obtain and utilize reliable information for adjusting insurance premiums.
+- **Cost and Time Efficiency**: Achieve significant savings in time and money through these measures.
 
-## Conclusion
-By integrating blockchain, IoT, and machine learning, AutoInsuranceChain provides a groundbreaking solution that addresses long-standing issues in the automotive insurance industry. The project not only offers a more accurate and fair system for calculating insurance premiums but also fosters greater trust between insurers and their customers by ensuring data transparency and security.
+## Business Model
+
+- **Database Creation**: Develop a comprehensive database of driving and accident reports to generate highly reliable predictive models.
+- **Customer and Insurer Benefits**: Offer competitive insurance prices based on actual risks, enhancing customer satisfaction and insurer competitiveness.
+- **Differentiation**: Utilize blockchain technology to ensure the authenticity and immutability of driving data.
+
+## Target Customers
+
+- Insurance companies seeking to offer innovative, technology-driven products.
+- Businesses with large vehicle fleets requiring driver monitoring solutions.
+
+## Problems Addressed
+
+Traditional insurance models do not adequately tailor to individual driving behaviors, leading to high premiums and customer dissatisfaction. AutoInsuranceChain aims to provide a more accurate and fair assessment of driving risks.
+
+## Value Proposition
+
+The project offers a reliable database of driving habits, enabling the creation of robust predictive models using Machine Learning. This approach allows insurers to offer personalized premiums, rewarding safe driving behaviors. The use of blockchain technology ensures data immutability and enhances customer trust.
+
+## Solution
+
+The solution involves a comprehensive tool for insurers to offer personalized products, providing economic advantages to safe drivers while allowing insurers to better manage risk.
+
+## Product Description
+
+AutoInsuranceChain is a platform that manages auto insurance under a "Pay As You Drive" model, using HyperLedger Fabric to ensure data integrity and security. The platform customizes insurance based on driving behavior and vehicle maintenance, recording essential data on a permissioned blockchain to prevent data manipulation.
+
+## System Architecture
+
+The architecture involves IoT devices in vehicles transmitting data to a blockchain network via Apache Kafka and Spark Streaming. This setup ensures real-time data processing and secure storage on Hyperledger Fabric, enabling efficient data analysis and risk assessment.
+
+## Technical Foundations
+
+The project utilizes Hyperledger Fabric, a permissioned blockchain framework, to provide a secure and scalable solution for managing insurance data. The system includes various roles such as clients, peers, and ordering services to manage transactions and ensure data integrity.
+
+## Decentralized Application (DApp)
+
+The DApp is built using Hyperledger Composer, allowing for rapid development and deployment of blockchain applications. It includes components for defining network assets, participants, and transactions, ensuring seamless integration with the Hyperledger Fabric network.
+
+## Deployment and Use
+
+The deployment involves setting up a network with various participants and assets, enabling insurers to manage policies and driving data efficiently. The system supports the addition of new garages and regulatory bodies to ensure comprehensive coverage and compliance.
+
+## Technical Roadmap
+
+The project is divided into several phases, including a pilot phase to test viability, a Machine Learning phase to develop predictive models, and a full deployment phase for commercial use. Additional parameters will be explored to enhance the accuracy of risk assessments.
+
+## Team Members
+- Min Yuan Chen
+- Nicolás Quintero
+- Virginia Saco
+- Emma Gutiérrez
+- Claudia Jara
+- Loreto Heres
+
+## Contributing
+
+We welcome contributions from the community.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
