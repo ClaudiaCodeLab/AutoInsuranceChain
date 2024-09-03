@@ -1,0 +1,139 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+namespace org.autoinsurancechain
+
+enum RoadType {
+  o RoadOne
+  o RoadTwo
+  o RoadThree
+  o RoadFour
+}
+
+enum StateVehicle {
+  o StateGood
+  o StateRegular
+  o StateBad
+}
+
+enum State {
+  o StateInactive
+  o StateActive  
+}
+
+participant Insurance identified by idInsurance{
+    o String idInsurance
+    o String name
+}
+
+participant Garage identified by idGarage{
+    o String idGarage
+    o String commercialname
+    o String city
+    o String postcode
+}
+
+participant Regulator identified by idRegulator{
+    o String idRegulator
+    o String name
+}
+
+asset Insured identified by idInsured {
+    o String idInsured 
+     --> Insurance owner
+}
+
+asset Vehicle identified by idVehicle {
+    o String idVehicle
+    o String color
+    o String horsepower
+    o String model 
+    o String brand 
+    o String year
+    o String carlicense
+    o StateVehicle statevehicle optional
+    --> Insured insured  
+}
+
+asset Device identified by idDevice {
+    o String idDevice
+    o String[] ids
+    o String timestamp
+    o Double linearacceleration optional
+    o Double lateralacceleration optional    
+    o RoadType roadtype optional
+}
+
+asset InsurancePolicy identified by idInsurancePolicy {
+    o String idInsurancePolicy
+    o State statepolicy
+    --> Vehicle insuranceVehicle    
+    --> Insured insured  
+    --> Device devicevehicle optional
+}
+
+transaction setup  {
+}
+
+transaction InsuredRegister {  
+    o String idinsurance
+}
+
+transaction VehicleRegister {
+    o String idVehicle  
+    o String color
+    o String horsepower
+    o String model 
+    o String brand 
+    o String year
+    o String carlicense
+    --> Insured insured 
+}
+
+transaction PolicyRegister {
+    o String idInsurancePolicy    
+    --> Vehicle insuranceVehicle    
+    --> Insured insured  
+}
+
+transaction SignUpDevicePolicy{
+    --> InsurancePolicy insurancepolicy 
+    o String idDevice
+    o String[] ids 
+}
+
+transaction DeviceSendInfo{
+    o Double linearacceleration
+   	o Double lateralacceleration
+   	o RoadType roadtype    
+    o String Timestamp
+    --> Device device    
+}
+
+transaction GarageSendInfo{
+ 	--> InsurancePolicy insurancepolicy
+    o StateVehicle statevehicle
+}
+
+transaction UpdateDevicePolicy{
+    o String[] ids    
+    --> InsurancePolicy insurancepolicy
+}
+
+transaction AddGarage{
+    o String idGarage
+    o String commercialname
+    o String city
+    o String postcode    
+}
