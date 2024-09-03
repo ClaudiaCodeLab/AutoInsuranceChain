@@ -17,7 +17,7 @@ AutoInsuranceChain is an innovative platform designed to transform the auto insu
 - [Decentralized Application (DApp)](#decentralized-application-dapp)
 - [Deployment and Use](#deployment-and-use)
 - [Technical Roadmap](#technical-roadmap)
-- [Team](#team-members)
+- [Team Members](#team-members)
 - [Contributing](#contributing)
 - [License](#license)
 
